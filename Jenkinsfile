@@ -15,9 +15,7 @@ pipeline{
             // }
             steps{
                 echo "Compiling fibonacci"
-                dir("vote") {
-                    sh "pip install -r requirements.txt";
-                }
+                sh "pip install -r requirements.txt";
             }
         }
         stage("Test"){
@@ -26,9 +24,7 @@ pipeline{
             // }
             steps{
                 echo "Testing vote"
-                dir("vote") {
                     sh "nosetests -sv --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml";
-                }
             }
         }
         stage('Sonarqube') {
