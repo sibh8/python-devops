@@ -26,10 +26,8 @@ pipeline{
                 echo "Testing vote"
                     sh "nosetests -sv --cover-erase \
                                       --with-xunit \
-                                      --xunit-file=nosetests.xml \
-                                      --with-coverage \
-                                      --cover-package=app \
-                                      --cover-xml-file=coverage.xml";
+                                      --xunit-file=nosetests.xml ";
+                    sh "pytest --cov=app --cov-report=xml"
             }
         }
         stage('Sonarqube') {
