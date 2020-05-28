@@ -1,4 +1,7 @@
-unittest
-pytest
+Flask
+Redis
+gunicorn
+nose
 coverage
-pytest-cov
+nosexcover
+pylint
