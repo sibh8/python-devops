@@ -28,8 +28,7 @@ pipeline{
                                       --with-xunit \
                                       --xunit-file=nosetests.xml \
                                       --with-coverage \
-                                      --cover-xml-file=coverage.xml \
-                                      --cover-tests test_*.py";
+                                      --cover-xml-file=coverage.xml";
             }
         }
         stage('Sonarqube') {
