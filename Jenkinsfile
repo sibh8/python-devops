@@ -24,7 +24,7 @@ pipeline{
             // }
             steps{
                 echo "Testing vote"
-                    sh "nosetests -sv --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml";
+                    sh "nosetests -sv --with-xunit --xunit-file=nosetests.xml --with-coverage --cover-xml-file=coverage.xml --cover-tests test_*.py";
             }
         }
         stage('Sonarqube') {
