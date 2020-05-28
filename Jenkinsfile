@@ -28,6 +28,7 @@ pipeline{
                                       --with-xunit \
                                       --xunit-file=nosetests.xml \
                                       --with-coverage \
+                                      --cover-package=app \
                                       --cover-xml-file=coverage.xml";
             }
         }
