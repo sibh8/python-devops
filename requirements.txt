@@ -5,3 +5,4 @@ nose
 coverage
 nosexcover
 pylint
+pytest-cov
